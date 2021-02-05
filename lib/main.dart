@@ -5,7 +5,14 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(MaterialApp(
 
-    home: Scaffold(
+    home: Home(),
+  ));
+}
+
+class Home extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
       appBar: AppBar(
         title: Text("Hello to my App bar"),
         centerTitle: true,
@@ -13,13 +20,13 @@ void main() {
       ),
       body: Center(
         child: Text(
-            "Hello Ninjaz",
+          "Hello to my Ninjaz",
           style: TextStyle(
-            fontSize: 30.0,
-            fontWeight: FontWeight.bold,
-            letterSpacing: 2.0,
-            color: Colors.orange[600],
-            fontFamily: 'IndieFlower' //according to the name saved in pubspec
+              fontSize: 30.0,
+              fontWeight: FontWeight.bold,
+              letterSpacing: 2.0,
+              color: Colors.orange[600],
+              fontFamily: 'IndieFlower' //according to the name saved in pubspec
           ),
         ),
       ),
@@ -28,6 +35,7 @@ void main() {
         child: Text("Click"),
         backgroundColor: Colors.purpleAccent[400],
       ),
-    ),
-  ));
+    );
+
+  }
 }
