@@ -1,0 +1,15 @@
+import 'dart:html';
+
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MaterialApp(
+
+    home: Scaffold(
+      appBar: AppBar(
+        title: Text("Hello to my App bar"),
+        centerTitle: true,
+      ),
+    ),
+  ));
+}
