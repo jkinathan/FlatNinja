@@ -21,7 +21,7 @@ class Home extends StatelessWidget {
       body: Center(
         child: IconButton(
           onPressed: () {
-              print("Fire email");
+              print("Fire emails");
           },
           icon: Icon(
             Icons.alternate_email,
