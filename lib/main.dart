@@ -15,102 +15,29 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
 
-  int counter = 0;
-
+  List<String> quotes = [
+    'Be Yourself',
+    'I have nothing to declare except my genius',
+    'The truth is rarely pure and never simple'
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey,
+      backgroundColor: Colors.blueGrey,
       appBar: AppBar(
-        title: Text("Ninja ID CARD"),
+        title: Text("Awesome Quotes"),
         centerTitle: true,
-        backgroundColor: Colors.purpleAccent[400],
-        elevation: 0.0,
+        backgroundColor: Colors.pink,
       ),
-      body: Padding(
-        padding: const EdgeInsets.fromLTRB(30.0,40.0,30.0,0.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Center(
-                child: CircleAvatar(
-                  backgroundImage: AssetImage('assets/ninja1.png'),
-                  radius: 50.0,
-                ),
-              ),
-              Divider(height: 60.0,color: Colors.yellowAccent),
-              Text(
-                  'NAME:',
-                style: TextStyle(
-                    color: Colors.red,
-                  letterSpacing: 2.0,
-                ),
-              ),
-              SizedBox(height: 20.0),
-              Text(
-                'Kinobe Jordan',
-                style: TextStyle(
-                  color: Colors.yellowAccent[200],
-                  letterSpacing: 2.0,
-                  fontSize: 20.0,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              SizedBox(height: 30.0),
-              Text(
-                'Current Ninja Level:',
-                style: TextStyle(
-                  color: Colors.red,
-                  letterSpacing: 2.0,
-                ),
-              ),
-              SizedBox(height: 20.0),
-              Text(
-                '$counter',
-                style: TextStyle(
-                  color: Colors.yellowAccent[200],
-                  letterSpacing: 2.0,
-                  fontSize: 20.0,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              SizedBox(height: 30.0),
-              Row(
-                children: [
-                  Icon(
-                    Icons.email,
-                    color: Colors.yellowAccent,
-                  ),
-                  SizedBox(width: 20.0),
-                  Text(
-                      'jkinobe@gmail.com',
-                    style: TextStyle(
-                      color: Colors.red,
-                      fontSize: 18.0,
-                      letterSpacing: 1.0,
-                    ),
+      body: Column(
+        children: quotes.map((quote){
+          return Text(quote);
+    }).toList(),
 
-                  ),
-                ],
-              ),
-            ],
-        ),
-      ),
-
-      floatingActionButton: FloatingActionButton(
-        onPressed: (){
-
-          setState(() {
-            this.counter = counter + 1;
-          });
-
-        },
-        child: Text("Click"),
-        backgroundColor: Colors.purpleAccent[400],
-      ),
+    )
     );
-
   }
 }
+
 
 
