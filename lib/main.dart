@@ -1,6 +1,7 @@
 // import 'dart:html';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -18,36 +19,13 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.purpleAccent[400],
       ),
-      body: Center(
-        child: IconButton(
-          onPressed: () {
-              print("Fire emails");
-          },
-          icon: Icon(
-            Icons.alternate_email,
-            color: Colors.purple,
-          ),
+      body: Container(
+        padding: EdgeInsets.all(20.0),
+        margin: EdgeInsets.all(50.0),
+        color: Colors.deepOrangeAccent,
+        child: Text(
+          'Testing padding',
         ),
-        // RaisedButton.icon(
-        //   onPressed: () {
-        //     print('You just clicked me');
-        //   },
-        //   icon: Icon(
-        //     Icons.email,
-        //   ),
-        //   label: Text(
-        //       'Mail me',
-        //       style: TextStyle(fontSize: 40.0,fontFamily: 'IndieFlower'),
-        //   ),
-        //   color: Colors.orange,
-        // ),
-        // Image.asset('assets/foodie.jpg'),//Image.network('');
-        // Image(
-        //   // image: NetworkImage('https://images.unsplash.com/photo-1550792173-5220eacae50e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80'),
-        //   // image: AssetImage('assets/foodie.jpg'),
-        //
-        // ),
-
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: (){},
