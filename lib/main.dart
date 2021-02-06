@@ -24,25 +24,53 @@ class Home extends StatelessWidget {
             children: [
               Row(
                 children: [
-                  Text('Hey'),
-                  Text('There'),
-                  Text('Its me'),
+                  Expanded(child: Image.asset('assets/foodie.jpg'),flex: 3,),
+                  Expanded(
+                    flex: 1,
+                    child: Container(
+                      color: Colors.pink,
+                      padding: EdgeInsets.all(30.0),
+                      child: Text('1'),
+                    ),
+                  ),
+                  Expanded(
+                    flex: 1,
+                    child: Container(
+                      color: Colors.yellowAccent,
+                      padding: EdgeInsets.all(30.0),
+                      child: Text('2'),
+                    ),
+                  ),
+                  Expanded(
+                    flex: 1,
+                    child: Container(
+                      color: Colors.red,
+                      padding: EdgeInsets.all(30.0),
+                      child: Text('3'),
+                    ),
+                  ),
                 ],
               ),
-              Container(
-                color: Colors.deepOrangeAccent,
-                padding: EdgeInsets.all(30.0),
-                child: Text('One'),
+              Expanded(
+                child: Container(
+                  color: Colors.green,
+                  padding: EdgeInsets.all(40.0),
+                  child: Text('Two'),
+                ),
               ),
-              Container(
-                color: Colors.green,
-                padding: EdgeInsets.all(40.0),
-                child: Text('Two'),
+              Expanded(
+                child: Container(
+                  color: Colors.deepOrangeAccent,
+                  padding: EdgeInsets.all(30.0),
+                  child: Text('One'),
+                ),
               ),
-              Container(
-                color: Colors.blue,
-                padding: EdgeInsets.all(50.0),
-                child: Text('Three'),
+              Expanded(
+                child: Container(
+                  color: Colors.blue,
+                  padding: EdgeInsets.all(50.0),
+                  child: Text('Three'),
+                ),
               ),
             ],
           ),
