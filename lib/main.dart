@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-
+import 'quote.dart';
 void main() {
   runApp(MaterialApp(
 
@@ -15,10 +15,10 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
 
-  List<String> quotes = [
-    'Be Yourself',
-    'I have nothing to declare except my genius',
-    'The truth is rarely pure and never simple'
+  List<Quote> quotes = [
+    Quote(thetext:"Be Happy",author:"Jordan"),
+    Quote(thetext:"Talk to me",author:"Murvin"),
+    Quote(thetext:"Pop deyshyt",author:"Albryt"),
   ];
   @override
   Widget build(BuildContext context) {
@@ -31,7 +31,7 @@ class _HomeState extends State<Home> {
       ),
       body: Column(
         children: quotes.map((quote){
-          return Text(quote);
+          return Text('${quote.thetext} - ${quote.author}');
     }).toList(),
 
     )
