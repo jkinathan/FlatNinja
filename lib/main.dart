@@ -8,7 +8,15 @@ void main() {
   ));
 }
 
-class Home extends StatelessWidget {
+class Home extends StatefulWidget {
+  @override
+  _HomeState createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+
+  int counter = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -58,7 +66,7 @@ class Home extends StatelessWidget {
               ),
               SizedBox(height: 20.0),
               Text(
-                '8',
+                '$counter',
                 style: TextStyle(
                   color: Colors.yellowAccent[200],
                   letterSpacing: 2.0,
@@ -90,7 +98,13 @@ class Home extends StatelessWidget {
       ),
 
       floatingActionButton: FloatingActionButton(
-        onPressed: (){},
+        onPressed: (){
+
+          setState(() {
+            this.counter = counter + 1;
+          });
+
+        },
         child: Text("Click"),
         backgroundColor: Colors.purpleAccent[400],
       ),
@@ -98,3 +112,5 @@ class Home extends StatelessWidget {
 
   }
 }
+
+
