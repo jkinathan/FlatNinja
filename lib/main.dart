@@ -17,20 +17,49 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.purpleAccent[400],
       ),
-      body: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Text('Hello World'),
-          FlatButton(onPressed: (){}, color: Colors.purple,child: Text('Press me'),),
-          Container(
-            color: Colors.amberAccent,
-            padding: EdgeInsets.all(30.0),
-            child: Text('Inside my Container'),
+      body:
+          Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Row(
+                children: [
+                  Text('Hey'),
+                  Text('There'),
+                  Text('Its me'),
+                ],
+              ),
+              Container(
+                color: Colors.deepOrangeAccent,
+                padding: EdgeInsets.all(30.0),
+                child: Text('One'),
+              ),
+              Container(
+                color: Colors.green,
+                padding: EdgeInsets.all(40.0),
+                child: Text('Two'),
+              ),
+              Container(
+                color: Colors.blue,
+                padding: EdgeInsets.all(50.0),
+                child: Text('Three'),
+              ),
+            ],
           ),
-        ],
-
-      ),
+      // Row(
+      //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      //   crossAxisAlignment: CrossAxisAlignment.center,
+      //   children: [
+      //     Text('Hello World'),
+      //     FlatButton(onPressed: (){}, color: Colors.purple,child: Text('Press me'),),
+      //     Container(
+      //       color: Colors.amberAccent,
+      //       padding: EdgeInsets.all(30.0),
+      //       child: Text('Inside my Container'),
+      //     ),
+      //   ],
+      //
+      // ),
       floatingActionButton: FloatingActionButton(
         onPressed: (){},
         child: Text("Click"),
