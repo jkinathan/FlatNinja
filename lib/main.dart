@@ -1,5 +1,3 @@
-// import 'dart:html';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
@@ -19,13 +17,19 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.purpleAccent[400],
       ),
-      body: Container(
-        padding: EdgeInsets.all(20.0),
-        margin: EdgeInsets.all(50.0),
-        color: Colors.deepOrangeAccent,
-        child: Text(
-          'Testing padding',
-        ),
+      body: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Text('Hello World'),
+          FlatButton(onPressed: (){}, color: Colors.purple,child: Text('Press me'),),
+          Container(
+            color: Colors.amberAccent,
+            padding: EdgeInsets.all(30.0),
+            child: Text('Inside my Container'),
+          ),
+        ],
+
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: (){},
