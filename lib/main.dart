@@ -34,8 +34,16 @@ class _HomeState extends State<Home> {
       ),
       body: Column(
         children: quotes.map((quote){
-          return QuoteCard(quote: quote);
-    }).toList(),
+          return QuoteCard(
+              quote: quote,
+              delete: (){
+                  setState(() {
+                    quotes.remove(quote);
+                  });
+              },//parameter name called delete
+          );
+        }
+    ).toList(),
 
     )
     );
