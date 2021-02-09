@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'quote.dart';
+import 'quote_card.dart';
 void main() {
   runApp(MaterialApp(
 
@@ -21,28 +22,7 @@ class _HomeState extends State<Home> {
     Quote(thetext:"Pop deyshyt",author:"Albryt"),
   ];
 
-  Widget quoteTemplate(quote){
-      return Card(
-          margin: EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 0.0),
-          child: Column(
-              children: [
-                  Text(quote.thetext,
-                  style: TextStyle(
-                    fontSize: 18.0,
-                    color: Colors.grey[600]
-                  ),
-                  ),
-                SizedBox(height: 6.0),
-                Text(quote.author,
-                style: TextStyle(
-                  fontSize: 14.0,
-                  color: Colors.grey[800],
-                ),
-                ),
-              ],
-          ),
-      );
-  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -54,13 +34,15 @@ class _HomeState extends State<Home> {
       ),
       body: Column(
         children: quotes.map((quote){
-          return quoteTemplate(quote);
+          return QuoteCard(quote: quote);
     }).toList(),
 
     )
     );
   }
 }
+
+
 
 
 
