@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'quote.dart';
@@ -16,6 +17,17 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
 
+  int counter=0;
+
+  incCounter(){
+
+    setState(() {
+      counter = counter+1;
+    });
+
+  }
+
+
   List<Quote> quotes = [
     Quote(thetext:"Be Happy",author:"Jordan"),
     Quote(thetext:"Talk to me",author:"Murvin"),
@@ -33,19 +45,43 @@ class _HomeState extends State<Home> {
         backgroundColor: Colors.pink,
       ),
       body: Column(
-        children: quotes.map((quote){
-          return QuoteCard(
-              quote: quote,
-              delete: (){
-                  setState(() {
-                    quotes.remove(quote);
-                  });
-              },//parameter name called delete
-          );
-        }
-    ).toList(),
 
-    )
+        children: [
+          Column(
+            children: quotes.map((quote){
+              return QuoteCard(
+                  quote: quote,
+                  delete: (){
+                      setState(() {
+                        quotes.remove(quote);
+                      });
+                  },//parameter name called delete
+              );
+            }
+    ).toList(),
+    ),
+
+          Row(
+
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text('$counter',
+                    style: TextStyle(color: Colors.red[600],fontSize: 35.0),
+              ),
+              RaisedButton(
+                  color: Colors.purple,
+                  onPressed: incCounter,
+                  child: Text(
+                    'Add count',
+                    style: TextStyle(
+                      color: Colors.red
+                    ),
+                  ),
+                  ),
+            ],
+          ),
+        ],
+      )
     );
   }
 }

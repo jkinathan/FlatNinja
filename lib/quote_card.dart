@@ -17,10 +17,12 @@ class QuoteCard extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          Text(quote.thetext,
-            style: TextStyle(
-                fontSize: 18.0,
-                color: Colors.grey[600]
+          Center(
+            child: Text(quote.thetext,
+              style: TextStyle(
+                  fontSize: 18.0,
+                  color: Colors.orange[600]
+              ),
             ),
           ),
           SizedBox(height: 6.0),
@@ -35,7 +37,7 @@ class QuoteCard extends StatelessWidget {
             onPressed: delete,
             label: Text('Delete'),
             icon: Icon(
-              Icons.delete
+              Icons.delete,color: Colors.red[800],
             ),
           ),
         ],
