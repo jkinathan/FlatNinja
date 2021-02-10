@@ -1,9 +1,17 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:flutter/services.dart';
 import 'quote.dart';
 import 'quote_card.dart';
+
 void main() {
+
+  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+      statusBarColor: Colors.purple,
+      systemNavigationBarColor: Colors.blue,
+
+  ));//change status bar color
   runApp(MaterialApp(
 
     home: Home(),

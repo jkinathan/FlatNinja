@@ -26,7 +26,7 @@ class QuoteCard extends StatelessWidget {
             ),
           ),
           SizedBox(height: 6.0),
-          Text(quote.author,
+          Text('by: '+quote.author,
             style: TextStyle(
               fontSize: 14.0,
               color: Colors.grey[800],
