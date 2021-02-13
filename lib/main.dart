@@ -9,11 +9,11 @@ void main() {
 
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
       statusBarColor: Colors.purple,
-      systemNavigationBarColor: Colors.blue,
+      systemNavigationBarColor: Colors.purple,
 
   ));//change status bar color
   runApp(MaterialApp(
-
+    debugShowCheckedModeBanner: false,
     home: Home(),
   ));
 }
